@@ -1,0 +1,146 @@
+nav {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    height: 100%;
+    left: 0;
+    background:white;
+    width: 100px;
+    overflow: hidden;
+    transition: width 0.2s linear;
+    box-shadow: 0 20px 35px #8c8c8c;
+}
+
+.logo {
+    text-align: center;
+    display: flex;
+    transition: all 0.5s;
+    margin-bottom: 70px;
+    margin-top: 15px;
+}
+
+.img {
+    width: 50px;
+    height: auto;
+    position: relative;
+    top: 14px;
+    left: 15px;
+    margin-right: 30px;
+}
+
+.nav-item {
+    position: relative;
+    margin-left: 10px;
+}
+
+nav:hover {
+    width: 250px;
+    transition: all 0.5s ease;
+}
+
+.logo img {
+    border-radius: 50%;
+    width: 60px;
+}
+
+.logo span,
+a span {
+    font-weight: bold;
+    padding: 15px;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+span:hover {
+    color: rgb(83, 57, 198);
+}
+
+a {
+    position: relative;
+    color: black;
+    font-size: 14px;
+    display: inline-flex;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+
+*{
+    padding:0;
+    margin:0;
+    box-sizing:border-box;
+}
+.wrapper{
+    position:relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.background-color{
+    width:100%.
+    min-height:100vh;
+    display:flex;
+}
+.bg-1{
+    flex:1;
+    background-color: blueviolet;
+}
+.bg-2{
+    flex:1;
+    background-color: rgb(43, 119, 226);
+}
+.about-container{
+    width:85%;
+    min-height: 80vh;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(191, 192, 194);
+    padding: 20px;
+    border-radius: 5px;
+}
+.image-container{
+    flex: 1;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.image-container img{
+    width:500px;
+    height:500px ;
+    object-fit: cover;
+    border-radius:6px ;
+}
+.text-container{
+    flex:1;
+    
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction:column ;
+}
+.text-container h1{
+    font-size: 22px;
+    padding: 10px 0px;
+}
+.text-container a{
+    text-decoration: none;
+    padding: 12px;
+    border-radius: 10px;
+    border: 2px solid white;
+    margin-top:30px;
+    background: linear-gradient(to bottom, #f3e5f5, #9c27b0); ;
+    color:white;
+    transition: background-color 0.3s ease;
+    margin-left: 10px;
+    white-space: nowrap;
+    font-size: 20px;
+}
+.text-container a:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+    color: black; /* Changez la couleur du texte en noir au survol */
+    border: 2px solid yellow; /* Ajoutez une bordure de couleur jaune au survol */
+    transition: background-color 0.3s ease;
+}

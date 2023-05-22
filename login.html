@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vision</title>
+    <script src="/eel.js"></script>
+    <link rel="stylesheet" type="text/css" href="login.css">
+
+     <script>
+        // Function to handle sign up form submission
+    function lg() {
+      var username = document.getElementById('username').value;
+      var password = document.getElementById('password').value;
+
+      // Call handle_signup() function exposed by Python code
+      eel.login(username, password)(function(result) {
+        if (result === 'Login successful!') {
+          document.getElementById('result').style.color = 'green'; // Change the color of the result to green for successful sign-up
+          document.getElementById('result').innerHTML = 'Step completed successfully!! Redirecting to face authentification...';
+          setTimeout(function() {
+            window.location.href = 'face_auth.html'; // Redirect to app.html upon successful sign-up after a delay
+          }, 2000);
+        } else {
+          document.getElementById('result').innerHTML = 'Error: ' + result; // Display error message in result div
+        }
+      });
+    }
+
+  </script>
+
+</head>
+<body>
+<nav>
+    <ul>
+      <li>
+        <a class="logo" href="#">
+        <img src="img\logo.png" class="img">
+        <span>Vision</span>
+        </a>
+      </li>
+      <li>
+        <a href="index.html">
+        <img  src="img\home.png" class="img">
+        <span class="nav-item">Home</span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+        <img src="img\\ser.png" class="img">
+        <span class="nav-item">Service</span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+        <img src="img\abt.png" class="img">
+        <span class="nav-item">About us</span>
+        </a>
+      </li>
+      <li>
+        <a class="lg" href="#">
+        <img src='img\lg.png' class="img">
+        <span class="nav-item">Log out</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+
+<div id="lg">
+    <div id="tr">
+      <h1>Log in</h1>
+    </div>
+
+    <div id="i1">
+      <input id="username" class="in" type="text" name="username" placeholder="username">
+    </div>
+
+    <div id="i2">
+      <input id="password" class="in" type="password" name="password" placeholder="password">
+    </div>
+
+    <div id="b1">
+      <input id="bt" type="button" name="valide" value="Log in" onclick="lg()">
+    </div>
+
+    <div id="sn">
+      <a href="sign_up.html">Not a member? Sign up Now!!</a>
+    </div>
+
+  </div>
+
+<div id="result"></div>
+
+</body>
+</html>

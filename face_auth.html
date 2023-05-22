@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vision</title>
+    <script src="/eel.js"></script>
+    <link rel="stylesheet" type="text/css" href="face_auth.css">
+
+     <script>
+  // Function to handle sign up form submission
+    function auth() {
+      document.getElementById('result').innerHTML = 'please wait a few seconds';
+
+      // Call ins_img() function exposed by Python code
+      eel.auth()(function(result) {
+        if (result === 'welcome') {
+          document.getElementById('result').style.color = 'green'; // Change the color of the result to green for successful sign-up
+          document.getElementById('result').innerHTML = 'Welcome....';
+          setTimeout(function() {
+            window.location.href = 'home.html'; // Redirect to home.html upon successful sign-up after a delay
+          }, 2000)
+          ;} else{
+          document.getElementById('result').style.color = 'red';
+          document.getElementById('result').innerHTML = 'Error: ' + result; // Display error message in result div
+        }
+      });
+    }
+        </script>
+
+
+  </script>
+
+</head>
+<body>
+<nav>
+    <ul>
+      <li>
+        <a class="logo" href="#">
+        <img src="img\logo.png" class="img">
+        <span>Vision</span>
+        </a>
+      </li>
+      <li>
+        <a href="index.html">
+        <img  src="img\home.png" class="img">
+        <span class="nav-item">Home</span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+        <img src="img\\ser.png" class="img">
+        <span class="nav-item">Service</span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+        <img src="img\abt.png" class="img">
+        <span class="nav-item">About us</span>
+        </a>
+      </li>
+      <li>
+        <a class="lg" href="#">
+        <img src='img\lg.png' class="img">
+        <span class="nav-item">Log out</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+
+<div id="lg">
+  <div id="tx">
+    <h1>Face authentication</h1>
+  </div>
+  <div id="im">
+    <img  src="img/9080677_face_id_icon.png">
+  </div>
+  <div id="b1">
+    <input id="bt" type="button" name="valide" value="Check it" onclick="auth()">
+  </div>
+  <div id="result"></div>
+</div>
+
+
+</body>
+</html>

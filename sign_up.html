@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Sign Up</title>
+    <script src="/eel.js"></script>
+    <link rel="stylesheet" type="text/css" href="sing_up.css">
+
+    <script>
+        // Function to handle sign up form submission
+    function signUp() {
+      const username = document.getElementById('username').value;
+      var password = document.getElementById('password').value;
+      var pas = document.getElementById('pas').value;
+      var name = document.getElementById('name').value;
+      var email = document.getElementById('email').value;
+      var date = document.getElementById('date').value;
+      var tel = document.getElementById('tel').value;
+
+      const Name = name;
+      localStorage.setItem('userName', Name);
+
+      // Call handle_signup() function exposed by Python code
+      eel.handle_signup(username, password, pas, name, email, date, tel)(function(result) {
+        if (result === 'Sign-up successful!') {
+          document.getElementById('result').style.color = 'green'; // Change the color of the result to green for successful sign-up
+          document.getElementById('result').innerHTML = 'Step completed successfully!! Redirecting to face authentification page...';
+          setTimeout(function() {
+            window.location.href = 'ins_img.html'; // Redirect to ins_img.html upon successful sign-up after a delay
+          }, 2000);
+        } else {
+          document.getElementById('result').style.color = 'red';
+          document.getElementById('result').innerHTML = 'Error: ' + result; // Display error message in result div
+        }
+      });
+    }
+
+       function rt() {
+           window.location.href = 'index.html';
+      }
+
+  </script>
+
+
+</head>
+
+
+<body>
+<nav>
+    <ul>
+      <li>
+        <a class="logo" href="#">
+        <img src="img\logo.png" class="img">
+        <span>Vision</span>
+        </a>
+      </li>
+      <li>
+        <a href="index.html">
+        <img  src="img\home.png" class="img">
+        <span class="nav-item">Home</span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+        <img src="img\\ser.png" class="img">
+        <span class="nav-item">Service</span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+        <img src="img\abt.png" class="img">
+        <span class="nav-item">About us</span>
+        </a>
+      </li>
+      <li>
+        <a class="lg" href="#">
+        <img src='img\lg.png' class="img">
+        <span class="nav-item">Log out</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+
+<section id="pr">
+
+    <div id="fr">
+        <div id="tr">
+        <h1>Sign Up</h1>
+        <h2>Register for more privileges</h2>
+    </div>
+
+    <form onsubmit="return false;">
+        <input id="username" class="in" type="text" id="username" name="username" placeholder="Username"><br>
+        <input id="name" class="in" type="text" id="name" name="name" placeholder="Full Name"><br>
+        <input id="email" class="in" type="email" id="email" name="email" placeholder="Email"><br>
+        <input id="date" class="in" type="date" id="date" name="date" placeholder="Birthday"><br>
+        <input id="tel" class="in" type="tel" id="tel" name="tel" placeholder="Phone Number"><br>
+        <input id="password" class="in" type="password" id="password" name="password" placeholder="Password"><br>
+        <input id="pas" class="in" type="password" id="pas" name="pas" placeholder="Reapeat Password"><br>
+        <button id="bt" type="button" onclick="signUp()">Sign Up</button>
+    </form>
+
+    <div id="result"></div>
+</div>
+
+
+<div id="ok">
+</div>
+
+</section>
+
+</body>
+</html>

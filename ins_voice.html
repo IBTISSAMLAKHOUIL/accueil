@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vision</title>
+    <script src="/eel.js"></script>
+    <link rel="stylesheet" type="text/css" href="ins_img.css">
+
+        <script>
+
+    function take() {
+        res = eel.record_audio()
+        document.getElementById('result').style.color = 'green';
+        document.getElementById('result').innerHTML = "Recording audio...";
+
+        eel.save_audio_blob_to_db(res)(function(result) {
+        if (result === "audio saved!!") {
+          document.getElementById('result').style.color = 'green'; // Change the color of the result to green for successful sign-up
+          document.getElementById('result').innerHTML = 'Step completed successfully!! Redirecting to Home...';
+          setTimeout(function() {
+            window.location.href = 'home.html'; // Redirect to ins_img.html upon successful sign-up after a delay
+          }, 2000)
+          ;} else{
+          document.getElementById('result').style.color = 'red';
+          document.getElementById('result').innerHTML = 'Error: '; // Display error message in result div
+        }
+      });
+    }
+
+        </script>
+
+</head>
+<body>
+    <nav>
+    <ul>
+      <li>
+        <a class="logo" href="#">
+        <img src="img/logo.png" class="img">
+        <span>Vision</span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+        <img  src="img/home.png" class="img">
+        <span class="nav-item">Home</span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+        <img src="img/ser.png" class="img">
+        <span class="nav-item">Service</span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+        <img src="img/abt.png" class="img">
+        <span class="nav-item">About us</span>
+        </a>
+      </li>
+      <li>
+        <a class="lg" href="#">
+        <img src="img/lg.png" class="img">
+        <span class="nav-item">Log out</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+
+<section id="pr">
+
+<div id="fr">
+    <div id="tx">
+        <h1>Voice Authentication</h1>
+        <h2>for more security</h2>
+    </div>
+
+    <div id="btn">
+        <input id="bt" type="button" value="Take" onclick="take()">
+    </div>
+
+    <div id="result"></div>
+
+</div>
+
+
+<div id="ok">
+    <img src="img/BIOMETRICAL-2.png">
+</div>
+
+</section>
+
+</body>
+</html>

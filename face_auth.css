@@ -1,0 +1,167 @@
+*{
+  margin: 0;
+  padding: 0;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  box-sizing: border-box;
+
+}
+
+nav{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  height: 100%;
+  left: 0;
+  background:white;
+  width: 90px;
+  overflow: hidden;
+  transition: width 0.2s linear;
+  box-shadow: 0 20px 35px #8c8c8c;
+}
+
+
+.img {
+  width: 50px;
+  height: 50px;
+  position: relative;.
+  top: 14px;
+  left: 8px;
+  margin-right: 30px;
+}
+
+
+.logo{
+  text-align: center;
+  display: flex;
+  transition: all 0.5s ease;
+  margin-bottom: 70px;
+  margin-top: 15px;
+}
+
+.a span{
+  padding-bottom: 10px;
+}
+
+.logo img{
+  border-radius: 50%;
+  width: 60px;
+}
+
+.logo span{
+  font-weight: bold;
+  padding: 15px;
+  font-size: 18px;
+  text-transform: uppercase;
+}
+
+
+span{
+  font-weight: bold;
+  padding: 15px;
+  padding-top: 20px;
+  font-size: 18px;
+  text-transform: uppercase;
+}
+
+span:hover{
+  color: rgb(83, 57, 198);
+}
+
+a{
+  position: relative;
+  color: black;
+  font-size: 14px;
+  display: inline-flex;
+  width: 300px;
+  padding : 10px;
+  margin-bottom: 10px;
+}
+
+.nav-item{
+  position: relative;
+  margin-left: 10px;
+}
+
+nav:hover{
+  width: 250px;
+  transition: all 0.5s ease;
+}
+
+.lg{
+  position: absolute;
+  bottom: 5px;
+}
+
+.lg img{
+  width: 45px;
+}
+
+
+/* ********************************** */
+
+body{
+  background-image:linear-gradient(rgb(63, 43, 150,0.6),rgb(168, 192, 255,0.3)),url("img/3357683.jpg");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+}
+
+#pr{
+  display: flex;
+}
+
+#lg{
+ background-color: white;
+ height: 340px;
+ width: 450px;
+ position: absolute;
+ top: 160px;
+ left: 430px;
+  border: solid 3px black;
+ justify-content: center;
+  border-radius: 10px;
+}
+
+#tx h1{
+  font-size: 40px;
+  padding-top: 40px;
+  padding-left: 50px;
+  margin-bottom: 30px;
+  color: rgb(0, 29, 102);
+}
+
+#bt{
+  width: 200px;
+  height: 45px;
+  border: solid 2px black;
+  background: rgb(0, 29, 102);
+  color: white;
+  font-size: 25px;
+  cursor: pointer;
+  margin-top: 30px;
+  margin-left: 113px;
+  border-radius: 5px;
+  transition: 0.5s;
+}
+
+#bt:hover{
+  transform: scale(1.1);
+}
+
+#result{
+  position: absolute;
+  bottom: 20px;
+  font-size: 20px;
+  padding-left: 110px;
+}
+
+#im img {
+  width: 80px;
+  height: 80px;
+  position: relative;
+  left: 170px;
+}
