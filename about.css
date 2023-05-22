@@ -1,146 +1,204 @@
-nav {
+*{
+    margin: 0;
+    padding: 0;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    box-sizing: border-box;
+  
+  }
+  
+  nav{
     position: absolute;
     top: 0;
     bottom: 0;
     height: 100%;
     left: 0;
     background:white;
-    width: 100px;
+    width: 90px;
     overflow: hidden;
     transition: width 0.2s linear;
     box-shadow: 0 20px 35px #8c8c8c;
-}
-
-.logo {
+  }
+  
+  
+  .img {
+    width: 50px;
+    height: 50px;
+    position: relative;.
+    top: 14px;
+    left: 8px;
+    margin-right: 30px;
+  }
+  
+  
+  .logo{
     text-align: center;
     display: flex;
-    transition: all 0.5s;
+    transition: all 0.5s ease;
     margin-bottom: 70px;
     margin-top: 15px;
-}
-
-.img {
-    width: 50px;
-    height: auto;
-    position: relative;
-    top: 14px;
-    left: 15px;
-    margin-right: 30px;
-}
-
-.nav-item {
-    position: relative;
-    margin-left: 10px;
-}
-
-nav:hover {
-    width: 250px;
-    transition: all 0.5s ease;
-}
-
-.logo img {
+  }
+  
+  .a span{
+    padding-bottom: 10px;
+  }
+  
+  .logo img{
     border-radius: 50%;
     width: 60px;
-}
-
-.logo span,
-a span {
+  }
+  
+  .logo span{
     font-weight: bold;
     padding: 15px;
     font-size: 18px;
     text-transform: uppercase;
-}
-
-span:hover {
+  }
+  
+  
+  span{
+    font-weight: bold;
+    padding: 15px;
+    padding-top: 20px;
+    font-size: 18px;
+    text-transform: uppercase;
+  }
+  
+  span:hover{
     color: rgb(83, 57, 198);
-}
-
-a {
+  }
+  
+  a{
     position: relative;
     color: black;
     font-size: 14px;
     display: inline-flex;
-    padding: 10px;
+    width: 300px;
+    padding : 10px;
     margin-bottom: 10px;
-}
-
-
-*{
-    padding:0;
-    margin:0;
-    box-sizing:border-box;
-}
-.wrapper{
-    position:relative;
+  }
+  body {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-end;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(90deg, #FC466B 0%, #3F5EFB 100%);
+    overflow: hidden;
 }
-.background-color{
-    width:100%.
-    min-height:100vh;
-    display:flex;
-}
-.bg-1{
-    flex:1;
-    background-color: blueviolet;
-}
-.bg-2{
-    flex:1;
-    background-color: rgb(43, 119, 226);
-}
-.about-container{
-    width:85%;
-    min-height: 80vh;
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: rgb(191, 192, 194);
-    padding: 20px;
-    border-radius: 5px;
-}
-.image-container{
-    flex: 1;
-    
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.image-container img{
-    width:500px;
-    height:500px ;
-    object-fit: cover;
-    border-radius:6px ;
-}
-.text-container{
-    flex:1;
-    
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    flex-direction:column ;
-}
-.text-container h1{
-    font-size: 22px;
-    padding: 10px 0px;
-}
-.text-container a{
-    text-decoration: none;
-    padding: 12px;
-    border-radius: 10px;
-    border: 2px solid white;
-    margin-top:30px;
-    background: linear-gradient(to bottom, #f3e5f5, #9c27b0); ;
-    color:white;
-    transition: background-color 0.3s ease;
+  
+  .nav-item{
+    position: relative;
     margin-left: 10px;
-    white-space: nowrap;
-    font-size: 20px;
+  }
+  
+  nav:hover{
+    width: 250px;
+    transition: all 0.5s ease;
+  }
+  
+  .lg{
+    position: absolute;
+    bottom: 5px;
+  }
+  
+  .lg img{
+    width: 45px;
+  }
+  
+  .hed {
+    font-family: police;
+    font-size:70pt;
+    margin-top: 100px;
+    font-size: 30pt;
+    margin-right: 500px;
+    padding: 20px;
+    color: black;
+  }
+  .desc{
+    font-family: police2;
+    margin-left: 750px;
+    margin-bottom: 0px;
+    color: #38444b;
+    font-size: 30pt;
+    border:3px solid rgb(181, 85, 160);
+    border-radius: 10px;
+  }
+  
+  
+  footer {
+    position: relative;
+    bottom: -9px;
+    
+    text-align: center;
+    background-color: #f1f1f1;
+    padding: 10px;
+    width: 100%;
+  }
+  .ground-color 0.3s ease;
 }
-.text-container a:hover {
-    background-color: rgba(0, 0, 0, 0.2);
-    color: black; /* Changez la couleur du texte en noir au survol */
-    border: 2px solid yellow; /* Ajoutez une bordure de couleur jaune au survol */
-    transition: background-color 0.3s ease;
+@font-face {
+  font-family: police;
+  src: url(font/Hanoble.otf);
+
+}   
+
+@font-face {
+  font-family: police2;
+  src: url(font/Begova\ -\ Personal\ Used.otf);
+  
+}   
+
+.vis{
+  position: relative;
+  top: -490px;
+  left:250px;
+
+  width: 30em;
+}
+
+.buttons-container {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start; 
+  justify-content: flex-end; 
+  position: relative;
+  margin-bottom: -200px; 
+  
+}
+
+
+.button {
+  display: inline-block;
+  padding: 10em -10em; /* Ajustez la valeur de padding pour définir la taille des boutons */
+  text-align: center;
+  text-decoration: none;
+  font-size: 1em;
+  border-radius: 4px;
+  color: white; /* Changez la couleur du texte en blanc */
+  background: linear-gradient(to bottom, #f3e5f5, #9c27b0); /* Utilisez votre dégradé personnalisé */
+  max-width: 200px;
+  width: -20px; /* Ajustez la largeur à 100% pour que les boutons soient de la même taille */
+  box-sizing: border-box;
+  transition: background-color 0.3s ease;
+  white-space: nowrap; /* Ajoutez cette ligne pour empêcher la séparation de "Sign" et "Up" sur deux lignes */
+  position: relative;
+  bottom:400px;
+  left: -350px;
+
+}
+
+.button:first-child {
+  margin-right: 10px; /* Ajoutez une marge à droite pour espacer les boutons si nécessaire */
+}
+
+.button:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+  color: black; /* Changez la couleur du texte en noir au survol */
+  border: 2px solid yellow; /* Ajoutez une bordure de couleur jaune au survol */
+  transition: background-color 0.3s ease;
 }
